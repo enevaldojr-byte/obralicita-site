@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="ObraLicita">
+<meta property="og:description" content="Licitações de obras, projetos e engenharia, todo dia no seu e-mail, com o edital resumido.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://obralicita.com.br/">
+<link rel="canonical" href="https://obralicita.com.br/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23141B22'/%3E%3Cpath d='M-4 20 12 4h8L4 20zM8 32 28 12h8L16 32z' fill='%23E8A400'/%3E%3C/svg%3E">
+<style>img{max-width:100%}[hidden]{display:none!important}.mailbtn{background:#1F3A5F!important;color:#fff!important}
+@media (max-width:420px){#mail{font-size:11.5px;letter-spacing:-.2px}}
+.zapbtn{display:inline-block;margin-left:8px;padding:4px 10px;border-radius:4px;background:#25D366;color:#06301a;font-weight:700;font-size:13px;text-decoration:none}
+</style>
+<title>ObraLicita</title>
+<meta name="description" content="Licitações de obras, projetos e engenharia, todo dia no seu e-mail, com o edital resumido.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a página como uma prancha de obra — faixas largas, carimbo (selo) no canto, exemplo real de e-mail como peça central */
+:root{
+  --bg:#ECEEEC;        /* concreto */
+  --paper:#FAFAF8;     /* folha */
+  --ink:#141B22;       /* asfalto */
+  --muted:#56616B;
+  --line:#C9CFCF;
+  --accent:#E8A400;    /* amarelo de sinalização */
+  --accent-ink:#141B22;
+  --steel:#2C5878;     /* azul aço, links */
+  --band:#141B22;      /* faixa escura */
+  --band-fg:#EEF1F1;
+  --ok:#2E7D4F;
+  --warn:#B4530A;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11161B;--paper:#182027;--ink:#E7EBED;--muted:#9AA6AF;--line:#2C3842;
+  --accent:#F2B51C;--accent-ink:#141B22;--steel:#8DB8DA;--band:#0B0F13;--band-fg:#E7EBED;--ok:#5FBF88;--warn:#F08A3C;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11161B;--paper:#182027;--ink:#E7EBED;--muted:#9AA6AF;--line:#2C3842;
+  --accent:#F2B51C;--accent-ink:#141B22;--steel:#8DB8DA;--band:#0B0F13;--band-fg:#E7EBED;--ok:#5FBF88;--warn:#F08A3C;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;margin:0}
+a{color:var(--steel)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;font-stretch:88%;letter-spacing:-.01em}
+h3{font-size:20px;font-weight:700;font-stretch:95%}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+p{margin:0}
+section{padding-block:72px}
+.lead{font-size:19px;color:var(--muted);max-width:62ch}
+
+/* topo */
+header.top{border-bottom:1px solid var(--line);background:var(--paper)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font-family:var(--f-display);font-weight:900;font-stretch:80%;font-size:26px;letter-spacing:-.01em;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.logo .mark{width:28px;height:28px;background:repeating-linear-gradient(-45deg,var(--accent) 0 6px,var(--ink) 6px 12px);border-radius:3px}
+.logo b{color:var(--accent);font-weight:900}
+nav{display:flex;gap:20px;font-size:15px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{text-decoration:underline}
+@media (max-width:640px){nav .hide-sm{display:none}}
+
+/* hero */
+.hero{padding-block:56px 72px}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start}
+@media (max-width:900px){.hero .grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(40px,6.4vw,74px);font-weight:900;font-stretch:78%;letter-spacing:-.015em;margin-top:14px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--accent) 62% 92%,transparent 92%)}
+.hero .lead{margin-top:20px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-stretch:95%;font-size:17px;padding:14px 22px;border-radius:4px;text-decoration:none;border:2px solid var(--ink);cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.05)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offset:2px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:15px;color:var(--muted)}
+.facts span::before{content:"■ ";color:var(--accent)}
+
+/* e-mail de exemplo */
+.mail{background:var(--paper);border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 40px -24px rgba(0,0,0,.45);overflow:hidden;min-width:0}
+.mail .bar{background:var(--band);color:var(--band-fg);padding:14px 18px}
+.mail .bar .sub{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;opacity:.75}
+.mail .bar .ttl{font-family:var(--f-display);font-weight:800;font-size:20px;margin-top:2px}
+.mail .body{padding:16px 18px;display:grid;gap:12px}
+.lic .org{font-size:13px;color:var(--muted)}
+.lic .obj{font-family:var(--f-display);font-weight:700;font-size:18px;line-height:1.2;margin-top:2px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;font-size:14px;margin-top:8px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-size:12px;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.ok{border-color:var(--ok);color:var(--ok)}
+.req{font-size:14px;margin-top:10px}
+.req h4{margin:0 0 4px;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.req ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.req.warn li::marker{color:var(--warn)}
+.mail .more{border-top:1px dashed var(--line);padding-top:10px;font-size:13px;color:var(--muted);font-family:var(--f-mono)}
+.mail .more div{display:flex;justify-content:space-between;gap:12px;padding-block:3px}
+.mail .more div span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.caption{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* como funciona */
+.band{background:var(--band);color:var(--band-fg)}
+.band .eyebrow{color:#9AA6AF}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border-top:2px solid var(--accent)}
+@media (max-width:800px){.steps{grid-template-columns:1fr}}
+.step{padding:22px 24px 6px 0;min-width:0}
+.step + .step{padding-left:24px;border-left:1px solid #2C3842}
+@media (max-width:800px){.step + .step{padding-left:0;border-left:0;border-top:1px solid #2C3842}}
+.step .time{font-family:var(--f-mono);font-size:30px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.step h3{margin-top:6px;color:var(--band-fg)}
+.step p{margin-top:8px;color:#B9C3CA;font-size:16px}
+
+/* resumo */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:32px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.checklist li{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.checklist li::before{content:"";width:16px;height:16px;margin-top:5px;border:2px solid var(--ink);background:linear-gradient(var(--accent),var(--accent)) center/8px 8px no-repeat}
+.checklist b{font-family:var(--f-display);font-weight:700;font-stretch:95%}
+.checklist span{display:block;color:var(--muted);font-size:15px}
+.note{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);padding:18px 20px;border-radius:4px;font-size:16px}
+.note + .note{margin-top:14px}
+
+/* planos */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.plan.pro{border:2px solid var(--ink);position:relative}
+.plan.pro .tag{position:absolute;top:-12px;left:22px;background:var(--accent);color:var(--accent-ink);font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;padding:3px 8px;border-radius:3px;text-transform:uppercase}
+.plan .who{color:var(--muted);font-size:15px;min-height:3em}
+.price{font-family:var(--f-display);font-weight:900;font-stretch:80%;font-size:46px;line-height:1;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--f-body);font-weight:400;font-size:15px;color:var(--muted);font-stretch:100%}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:0;font-size:15px}
+.plan li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--line)}
+.plan li span:last-child{font-weight:700;text-align:right}
+.plan .btn{justify-content:center;margin-top:auto}
+.plans-foot{margin-top:18px;font-size:14px;color:var(--muted)}
+
+/* piloto */
+.pilot{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;margin-top:28px}
+@media (max-width:860px){.pilot{grid-template-columns:1fr}}
+.pilot ol{margin:0;padding-left:22px;display:grid;gap:10px}
+.carimbo{border:2px solid var(--ink);background:var(--paper);font-size:14px}
+.carimbo .row{display:grid;grid-template-columns:120px 1fr;border-top:1px solid var(--ink)}
+.carimbo .row:first-child{border-top:0}
+.carimbo .row > *{padding:10px 12px;min-width:0}
+.carimbo .row > :first-child{border-right:1px solid var(--ink);font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.carimbo .head{font-family:var(--f-display);font-weight:900;font-stretch:80%;font-size:22px;padding:12px;background:var(--accent);color:var(--accent-ink);border-bottom:2px solid var(--ink)}
+.copy{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.copy code{font-family:var(--f-mono);font-size:13px;word-break:break-all}
+.copy button{font:inherit;font-size:12px;padding:4px 10px;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:3px;cursor:pointer}
+
+/* perguntas */
+.faq{margin-top:28px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font-family:var(--f-display);font-weight:700;font-size:19px;font-stretch:95%;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:10px;color:var(--muted);max-width:70ch}
+
+footer{border-top:1px solid var(--line);background:var(--paper);font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
+@media (prefers-reduced-motion:no-preference){.mail{animation:rise .6s ease-out both}@keyframes rise{from{transform:translateY(8px)}to{transform:none}}}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><span class="mark" aria-hidden="true"></span><span>Obra<b>Licita</b></span></a>
+    <nav aria-label="Seções">
+      <a class="hide-sm" href="#como-funciona">Como funciona</a>
+      <a class="hide-sm" href="#resumo">O resumo</a>
+      <a href="#planos">Planos</a>
+      <a href="#piloto">Teste grátis</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">Licitações de obras, projetos e engenharia</div>
+        <h1>As licitações certas para sua empresa, <em>todo dia antes das 10h</em>, com o edital já resumido.</h1>
+        <p class="lead">O ObraLicita lê o PNCP por você, separa só o que combina com o tipo de obra, a região e a faixa de valor da sua empresa, e entrega no seu e-mail o que o edital exige: atestados, garantias, visita técnica e prazos, com a página de cada exigência.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#piloto">Testar 30 dias grátis</a>
+          <a class="btn ghost" href="#resumo">Ver um resumo real</a>
+        </div>
+        <div class="facts"><span>Sem cartão</span><span>Fonte oficial: PNCP</span><span>Feito por engenheiro civil</span></div>
+      </div>
+
+      <figure class="mail" aria-label="Exemplo de e-mail diário do ObraLicita" style="margin:0">
+        <div class="bar">
+          <div class="sub">OBRALICITA · LICITAÇÕES DE OBRAS, PROJETOS E ENGENHARIA</div>
+          <div class="ttl">Licitações do dia · 09/11/2026</div>
+        </div>
+        <div class="body">
+          <div class="lic">
+            <div class="org">Município de Realeza · Realeza/PR · Concorrência eletrônica</div>
+            <div class="obj">Pavimentação em CBUQ de 11.715,13 m² da Estrada Rural Linha São Miguel</div>
+            <dl class="kv">
+              <dt>Valor estimado</dt><dd>R$ 4.742.287,18</dd>
+              <dt>Propostas até</dt><dd>26/11/2026 13:30</dd>
+              <dt>Prazo da obra</dt><dd>540 dias</dd>
+            </dl>
+            <div class="chips"><span class="chip ok">bate com: pavimentação</span><span class="chip">visita facultativa</span><span class="chip">consórcio permitido</span></div>
+            <div class="req">
+              <h4>Qualificação técnica</h4>
+              <ul>
+                <li>Atestado de CBUQ ≥ 1.367,46 t, com CAO do CREA/CAU (p. 11)</li>
+                <li>CAT do responsável técnico em obra equivalente (item 7.5.3.2)</li>
+              </ul>
+            </div>
+            <div class="req warn">
+              <h4>Pontos de atenção</h4>
+              <ul>
+                <li>Garantia de proposta de ~R$ 47 mil antes de 26/11</li>
+                <li>Patrimônio líquido mínimo de R$ 474.228,71</li>
+              </ul>
+            </div>
+          </div>
+          <div class="more">
+            <div><span>Reforma do Ginásio Moringão · Londrina/PR</span><span>R$ 1.001.747</span></div>
+            <div><span>Construção de CRAS · Guaíra/PR</span><span>R$ 1.571.850</span></div>
+            <div><span>+ outras compatíveis com o seu perfil</span><span></span></div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="como-funciona">
+    <div class="wrap">
+      <div class="eyebrow">Como funciona</div>
+      <h2 style="margin-top:10px">Três horários, nenhum trabalho seu.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="time">06h40</div>
+          <h3>Busca no PNCP</h3>
+          <p>O robô lê todas as licitações abertas do Portal Nacional de Contratações Públicas nos estados da sua empresa.</p>
+        </div>
+        <div class="step">
+          <div class="time">06h50</div>
+          <h3>Filtro e resumo</h3>
+          <p>Fica só o que bate com seu perfil. Os editais de prazo mais próximo são lidos e resumidos, com a página de cada exigência.</p>
+        </div>
+        <div class="step">
+          <div class="time">07h00</div>
+          <h3>No seu e-mail</h3>
+          <p>Um e-mail por dia útil, só com licitações novas. Nada de repetir o que você já viu ontem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resumo">
+    <div class="wrap">
+      <div class="eyebrow">O resumo do edital</div>
+      <h2 style="margin-top:10px">Em dois minutos você sabe se vale abrir as 60 páginas.</h2>
+      <div class="two">
+        <ul class="checklist">
+          <li><div><b>Objeto, valor e prazo da obra</b><span>O que será contratado, em uma frase, com área, extensão ou quantitativo.</span></div></li>
+          <li><div><b>Datas que importam</b><span>Limite de propostas, esclarecimentos e agendamento de visita técnica.</span></div></li>
+          <li><div><b>Qualificação técnica</b><span>Atestados, CAT, quantitativos mínimos e profissionais exigidos, com o item e a página.</span></div></li>
+          <li><div><b>Qualificação econômica</b><span>Patrimônio líquido, índices e garantia de proposta.</span></div></li>
+          <li><div><b>Pontos de atenção</b><span>Exigências incomuns, prazos curtos, BDI, reajuste e restrições de subcontratação.</span></div></li>
+          <li><div><b>Para quem é indicada</b><span>Uma frase dizendo que tipo de empresa tem chance real nessa disputa.</span></div></li>
+        </ul>
+        <div>
+          <div class="note"><b>Exemplo real.</b> No edital de Realeza/PR, o resumo apontou que o atestado de CBUQ só vale acompanhado de Certidão de Acervo Operacional (CAO), detalhe que inabilita muita empresa e que está na página 11.</div>
+          <div class="note">O resumo não substitui a leitura do edital. Ele mostra onde olhar e ajuda a decidir rápido se vale a pena participar.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" style="padding-top:24px">
+    <div class="wrap">
+      <div class="eyebrow">Planos</div>
+      <h2 style="margin-top:10px">Todos começam com 30 dias grátis.</h2>
+      <div class="plans">
+        <div class="plan">
+          <div><h3>Essencial</h3><p class="who">Para quem atua numa região e quer parar de garimpar portal.</p></div>
+          <div class="price">R$ 129<small> /mês</small></div>
+          <ul>
+            <li><span>Perfis de busca</span><span>1</span></li>
+            <li><span>Região</span><span>1 estado</span></li>
+            <li><span>E-mails que recebem</span><span>1</span></li>
+            <li><span>Editais resumidos</span><span>10/mês</span></li>
+            <li><span>Lista diária completa</span><span>Sim</span></li>
+          </ul>
+          <a class="btn ghost" href="#piloto">Testar grátis</a>
+        </div>
+        <div class="plan pro">
+          <span class="tag">Mais indicado</span>
+          <div><h3>Profissional</h3><p class="who">Para construtoras que disputam várias licitações por mês.</p></div>
+          <div class="price">R$ 249<small> /mês</small></div>
+          <ul>
+            <li><span>Perfis de busca</span><span>1</span></li>
+            <li><span>Região</span><span>até 3 estados</span></li>
+            <li><span>E-mails que recebem</span><span>3</span></li>
+            <li><span>Editais resumidos</span><span>40/mês</span></li>
+            <li><span>Resumo de edital que você escolher</span><span>Sim</span></li>
+            <li><span>Ajuste do perfil com engenheiro</span><span>Mensal</span></li>
+          </ul>
+          <a class="btn primary" href="#piloto">Testar grátis</a>
+        </div>
+        <div class="plan">
+          <div><h3>Empresa</h3><p class="who">Para quem faz obra, projeto e gerenciamento e quer cada área no seu e-mail.</p></div>
+          <div class="price">R$ 497<small> /mês</small></div>
+          <ul>
+            <li><span>Perfis de busca</span><span>até 3</span></li>
+            <li><span>Região</span><span>todo o Brasil</span></li>
+            <li><span>E-mails que recebem</span><span>10</span></li>
+            <li><span>Editais resumidos</span><span>150/mês</span></li>
+            <li><span>Resumo de edital que você escolher</span><span>Sim</span></li>
+            <li><span>Relatório mensal de oportunidades</span><span>Sim</span></li>
+            <li><span>Atendimento por WhatsApp</span><span>Sim</span></li>
+          </ul>
+          <a class="btn ghost" href="#piloto">Testar grátis</a>
+        </div>
+      </div>
+      <p class="plans-foot">Sem fidelidade. Pagando o ano, você leva 12 meses pelo preço de 10.</p>
+    </div>
+  </section>
+
+  <section id="piloto" style="padding-top:24px">
+    <div class="wrap">
+      <div class="eyebrow">Teste grátis</div>
+      <h2 style="margin-top:10px">30 dias por nossa conta, para as primeiras empresas.</h2>
+      <div class="pilot">
+        <div>
+          <p class="lead" style="margin-bottom:18px">Estamos abrindo vagas para poucas empresas testarem o ObraLicita com o perfil completo. No fim, só pedimos 15 minutos de conversa para saber o que ajudou.</p>
+          <ol>
+            <li>Mande uma mensagem dizendo o <b>tipo de obra ou serviço</b> que sua empresa faz (ex.: pavimentação, reforma de escolas, UBS, projetos).</li>
+            <li>Diga as <b>cidades ou estados</b> onde atua e a <b>faixa de valor</b> que costuma disputar.</li>
+            <li>Informe até <b>3 e-mails</b> para receber. O primeiro envio sai no dia útil seguinte.</li>
+          </ol>
+        </div>
+        <div class="carimbo" aria-label="Contato">
+          <div class="head">Quero testar</div>
+          <div class="row"><div>WhatsApp</div><div class="copy"><code id="zap">(41) 98846-1488</code><button type="button" data-copy="zap">Copiar</button><a class="zapbtn" href="https://wa.me/5541988461488?text=Ol%C3%A1%21%20Quero%20testar%20o%20ObraLicita%20por%2030%20dias.%20Minha%20empresa%20faz%3A%20" target="_blank" rel="noopener">Abrir no WhatsApp</a></div></div>
+          <div class="row"><div>E-mail</div><div class="copy"><code id="mail">contato.obralicita@gmail.com</code><button type="button" data-copy="mail">Copiar</button><a class="zapbtn mailbtn" href="mailto:contato.obralicita@gmail.com?subject=Quero%20testar%20o%20ObraLicita">Escrever</a></div></div>
+          <div class="row"><div>Prazo</div><div>30 dias corridos, sem cartão</div></div>
+          <div class="row"><div>Envio</div><div>Dias úteis, antes das 10h</div></div>
+          <div class="row"><div>Fonte</div><div>PNCP – Portal Nacional de Contratações Públicas</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="perguntas" style="padding-top:24px">
+    <div class="wrap">
+      <div class="eyebrow">Perguntas</div>
+      <h2 style="margin-top:10px">O que costumam perguntar</h2>
+      <div class="faq">
+        <details><summary>De onde vêm as licitações?</summary><p>Do PNCP, o portal oficial onde órgãos federais, estaduais e municipais são obrigados a publicar as contratações pela Lei 14.133/2021.</p></details>
+        <details><summary>Quem escolhe o que entra no meu e-mail?</summary><p>Você. O perfil tem as palavras do tipo de obra, o que não interessa (ex.: “aquisição de materiais”), a região e a faixa de valor. Se vier algo fora do perfil, a gente ajusta.</p></details>
+        <details><summary>Todos os editais vêm resumidos?</summary><p>Os editais de prazo mais próximo vêm com o resumo completo, até o limite do plano. Os demais vêm na lista com órgão, cidade, objeto, valor, prazo e link para o edital.</p></details>
+        <details><summary>Posso cancelar quando quiser?</summary><p>Sim. Não há fidelidade no plano mensal, e o teste grátis termina sozinho, sem cobrança.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b style="color:var(--ink)">ObraLicita</b> · licitações de obras, projetos e engenharia</span>
+    <span>obralicita.com.br</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.getAttribute('data-copy'));
+    var t=el.textContent.trim();
+    var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1600)};
+    try{navigator.clipboard.writeText(t).then(done,function(){sel(el)})}catch(e){sel(el)}
+  });
+});
+function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+</script>
+
+</body>
+</html>
